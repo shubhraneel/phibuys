@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700;900&family=Pacifico&family=Ubuntu&family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Phibuys - Online shopping site</title>
+  </head>
+  <body>
+    
+      <input type="checkbox" id="color-toggle--light" class="color-toggle">
+      <input type="checkbox" id="color-toggle--dark" class="color-toggle">
+      <div class="color-mode">
+        <label for="color-toggle--light" class="color-mode__button color-mode__button--light">
+          <p class="color-mode__button--text">Light Mode<i class="far fa-sun"></i></p> 
+        </label>
+          <label for="color-toggle--dark" class="color-mode__button color-mode__button--dark">
+            <p class="color-mode__button--text">Dark Mode <i class="fas fa-moon"></i></p> 
+          </label>
+
+      </div>
+  
+      <nav class="navigation">
+        <div class="logo navigation__logo">
+          <img
+              class="logo--pic"
+              src="images/Icon-Startup.png"
+              alt="logo"
+            />
+          <h2 class="logo--text">
+              buys
+          </h2>
+          <i class="fas fa-shopping-cart fa-2x logo--icon"></i>
+        </div>
+        <a href="https://www.google.com/covid19/" class="navigation__button navigation__button--covid" target="_blank">
+          <i class="fas fa-shield-virus"></i> COVID-19 Advice
+        </a>
+        <a href="#section-form" class="navigation__button">
+          Review us
+        </a>
+        <a href="#section-reviews" class="navigation__button">
+          User Reviews
+        </a>
+        <a href="#section-mostBought" class="navigation__button">
+          Most Bought
+        </a>
+        <a href="#section-surprise" class="navigation__button">
+          Surprises
+        </a>
+        <a href="#section-launchsoon" class="navigation__button">
+          New Launches
+        </a>
+        <div class="navigation__toggle">
+          <input type="checkbox" class = "navigation__checkbox" id="navigation-toggle">
+          <label for="navigation-toggle" class = "navigation__toggler">
+            <span class="navigation__burger">&nbsp;</span>
+          </label>
+        
+        <div class="navigation__menu">
+          <div class="navigation__list">
+          
+            <a href="#section-launchsoon" class="navigation__button--mobile">
+              New Launches
+            </a>
+            
+            <a href="#section-surprise" class="navigation__button--mobile">
+              Surprises
+            </a>
+            <a href="#section-mostBought" class="navigation__button--mobile">
+              Most Bought
+            </a>
+            <a href="#section-reviews" class="navigation__button--mobile">
+              User Reviews
+            </a>
+            <a href="#section-form" class="navigation__button--mobile">
+              Review us
+            </a>
+            <a href="https://www.google.com/covid19/" class="navigation__button--mobile navigation__button--covid" target="_blank">
+              <i class="fas fa-shield-virus"></i> COVID-19 Advice
+            </a>
+          </div>
+          </div>
+          </div>
+        </div>
+      </nav>
+    
+
+    <section class="section-intro" id="section-intro">
+      <div class="header">
+        <h1 class="heading">
+          <span class="heading__primary">phibuys</span>
+          <span class="heading__sub">shopping made easy</span>
+          <div class="surprise">
+            <a href="#section-surprise" class="surprise__button" >Surprises for you!!!</a>
+          </div>
+        </h1>
+      </div>
+    </section>
+
+    <section class= "section-launchsoon" id="section-launchsoon">
+      <div>
+        <h2 class = "sechead">Launching soon...</h2>
+      </div>
+      <div class="container-fluid launch-soon">
+        <div class="row launch-soon__row">
+          <div class="col-xl-6 col-lg-12 launch-soon__comments launch-soon__comments--left">
+            <h2>
+              Electronics
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod 
+            </p>
+          </div>
+          <div class="col-xl-6 col-lg-12 launch-soon__images launch-soon__images--right">
+            <img src="images/tv.jpg" alt="tv" class="launch-soon__img launch-soon__img--1" />
+            <img src="images/redmi.jpg" alt="phone" class="launch-soon__img launch-soon__img--2" />
+            <img src="images/samsung.jpg" alt="band" class="launch-soon__img launch-soon__img--3" />
+            <img src="images/honor.jpg" alt="honor" class="launch-soon__img launch-soon__img--4" />
+          </div>
+        </div>
+        <div class="row launch-soon__row">
+          <div class="col-xl-6 col-lg-12 launch-soon__comments launch-soon__comments--right">
+            <h2>
+              Kitchen
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod 
+            </p>
+          </div>
+          <div class="col-xl-6 col-lg-12 launch-soon__images launch-soon__images--left">
+            <img src="images/chimney.jpg" alt="tv" class="launch-soon__img launch-soon__img--1" />
+            <img src="images/cooker.jpg" alt="phone" class="launch-soon__img launch-soon__img--2" />
+            <img src="images/kettle.jpg" alt="band" class="launch-soon__img launch-soon__img--3" />
+            <img src="images/oven.jpg" alt="honor" class="launch-soon__img launch-soon__img--4" />
+          </div>
+        </div>
+        <div class="row launch-soon__row">
+          <div class="col-xl-6 col-lg-12 launch-soon__comments launch-soon__comments--left">
+            <h2>
+              Home Appliances
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod
+            </p>
+          </div>
+          <div class="col-xl-6 col-lg-12 launch-soon__images launch-soon__images--right">
+            <img src="images/ac2.jpg" alt="tv" class="launch-soon__img launch-soon__img--1" />
+            <img src="images/refri.jpg" alt="phone" class="launch-soon__img launch-soon__img--2" />
+            <img src="images/washing.jpg" alt="band" class="launch-soon__img launch-soon__img--3" />
+            <img src="images/water.jpg" alt="honor" class="launch-soon__img launch-soon__img--4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-surprise" id = "section-surprise">
+      <h2 class = "sechead">Surprises</h2>
+      <div class = "surprise-cards">
+        <div class = row>
+          <div class = "col-lg-3 col-md-6 col-sm-12">
+            <div class = "surprise-card">
+              <img class = "surprise-card__img-top" src="images/hp-omen.jpg" alt="">
+              <div class = "surprise-card__header"> 
+                HP
+              </div>
+              <div class = "surprise-card__body">
+                  <p class="surprise-card__para">Omen 17-cb0080nr, Black</p>
+                  <p class="surprise-card__para">
+                    <span class = "surprise-card__original-price">&#8377;99,500</span>
+                    <span>&#8377;45,000 (58% off)</span>
+                  </p>
+                  <div class = "surprise-card__knw-mr">
+                    <a class = "surprise-card__button" href="#popup-1">
+                      KNOW MORE
+                    </a>
+                  </div>
+              </div>
+                
+              </div>
+          </div>
+          <div class = "col-lg-3 col-md-6 col-sm-12">
+            <div class = "surprise-card">
+              <img class = "surprise-card__img-top" src="images/ac.jpg" alt="">
+              <div class = "surprise-card__header"> 
+                Panasonic
+              </div>
+              <div class = "surprise-card__body">
+                  <p class="surprise-card__para">1.5ton 5-star Smart AC</p>
+                  <p class="surprise-card__para">
+                    <span class = "surprise-card__original-price">&#8377;54,500</span>
+                    <span>&#8377;35,000 (36% off)</span>
+                  </p>
+                  <div class = "surprise-card__knw-mr">
+                    <a class = "surprise-card__button" href="#popup-2">
+                      KNOW MORE
+                    </a>
+                  </div>
+              </div>
+                
+            </div>
+                
+            
+          </div>
+          <div class = "col-lg-3 col-md-6 col-sm-12">
+            <div class = "surprise-card">
+              <img class = "surprise-card__img-top" src="images/iphone.jpg" alt="">
+              <div class = "surprise-card__header"> 
+                Apple
+              </div>
+              <div class = "surprise-card__body">
+                  <p class="surprise-card__para">iPhone 11 Pro Max 6GB RAM</p>
+                  <p class="surprise-card__para">
+                    <span class = "surprise-card__original-price">&#8377;73,000</span>
+                    <span>&#8377;50,000 (32% off)</span>
+                  </p>
+                  <div class = "surprise-card__knw-mr">
+                    <a class = "surprise-card__button" href="#popup-3">
+                      KNOW MORE
+                    </a>
+                  </div>
+              </div>
+                
+              </div>
+          </div>
+          <div class = "col-lg-3 col-md-6 col-sm-12">
+            <div class = "surprise-card">
+              <img class = "surprise-card__img-top" src="images/nike.jpg" alt="">
+              <div class = "surprise-card__header"> 
+                Nike
+              </div>
+              <div class = "surprise-card__body">
+                  <p class="surprise-card__para">Epic React Flynick Shoes</p>
+                  <p class="surprise-card__para">
+                    <span class = "surprise-card__original-price">&#8377;12,000</span>
+                    <span>&#8377;7,000 (42% off)</span>
+                  </p>
+                  <div class = "surprise-card__knw-mr">
+                    <a class = "surprise-card__button" href="#popup-4">
+                      KNOW MORE
+                    </a>
+                  </div>
+              </div>
+                
+            </div>
+                
+          </div>
+        </div>
+        
+        
+        
+          
+        
+      </div>
+    </section>
+
+    <section class="section-mostBought" id="section-mostBought">
+      
+        <h2 class="sechead">
+          Most Bought Items
+        </h2>
+
+      
+      
+        <div class="rows">
+          <div class="col-1-of-3">
+            <div class="most-card most-card--big">
+              <div class=most-card__number><h3>1</h3></div>
+              <div class="most-card__image">
+                <img src="images/phone3.jpg" alt="">
+              </div>
+              <div class="most-card__description">
+                <p>
+                  Realme 5i (Forest Green, 128 GB)(4 GB RAM)
+                </p>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <p>Bought by 20104 people</p>
+              </div>
+            </div>
+          </div><div class="col-1-of-3">
+            <div class="most-card most-card--big">
+              <div class=most-card__number><h3>2</h3></div>
+              <div class="most-card__image">
+                <img src="images/tv3.jpg" alt="">
+              </div>
+              <div class="most-card__description">
+                <p>
+                  Mi LED Smart TV 4A PRO 80 cm (32) with Android
+                </p>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <p>Bought by 15071 people</p>
+              </div>
+            </div>
+          </div><div class="col-1-of-3">
+            <div class="most-card most-card--big">
+              <div class=most-card__number><h3>3</h3></div>
+              <div class="most-card__image">
+                <img src="images/laptop3.jpg" alt="">
+              </div>
+              <div class="most-card__description">
+                <p>
+                  Lenovo Ideapad S145 APU Dual Core A6 - (4 GB RAM)
+                </p>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <p>Bought by 12540 people</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rows">
+          <div class="col-1-of-4">
+            <div class="most-card">
+              <div class=most-card__number><h3>4</h3></div>
+              <div class="most-card__image">
+                <img src="images/earphone3.jpg" alt="">
+              </div>
+              <div class="most-card__description">
+                <p>
+                  Mi Basic Wired Headphone with Mic  (Black, Wired in the ear) 
+                </p>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
+                <p>Bought by 9045 people</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="most-card">
+              <div class=most-card__number><h3>5</h3></div>
+              <div class="most-card__image">
+                <img src="images/powerbank.jpg" alt="">
+              </div>
+              <div class="most-card__description">
+                <p>
+                  Mi 10000 mAh Power Bank (Fast Charging, 18 W)  (Blue, Lithium)
+                </p>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
+                <p>Bought by 8003 people</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="most-card">
+              <div class=most-card__number><h3>6</h3></div>
+              <div class="most-card__image">
+                <img src="images/speaker.jpg" alt="">
+              </div>
+              <div class="most-card__description">
+                <p>
+                  Philips BT40 Portable Bluetooth Speaker (Black, Mono Channel)
+                </p>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <p>Bought by 7456 people</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="most-card">
+              <div class=most-card__number><h3>7</h3></div>
+              <div class=most-card__number></div>
+              <div class="most-card__image">
+                <img src="images/watch.jpg" alt="">
+              </div>
+              <div class="most-card__description">
+                <p>
+                  Timex Rose Black Analog Watch - For Men Analog Watch - For Men
+                </p>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
+                <p>Bought by 6500 people</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="rows rows--last">
+            <div class="col-1-of-3">
+              <div class="most-card">
+                <div class=most-card__number><h3>8</h3></div>
+                <div class="most-card__image">
+                  <img src="images/inverter3.jpg" alt="">
+                </div>
+                <div class="most-card__description">
+                  <p>
+                    Microtek UPS EB 800VA Square Wave Extra-Long-Life Inverter 
+                  </p>
+                  <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
+                  <p>Bought by 6001 people</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <div class="most-card">
+                <div class=most-card__number><h3>9</h3></div>
+                <div class="most-card__image">
+                  <img src="images/tubelight.jpg" alt="">
+                </div>
+                <div class="most-card__description">
+                  <p>
+                  Philips 8W B22 T-BULB Straight Linear LED Tube Light 
+                  </p>
+                  <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></i></p>
+                  <p>Bought by 5013 people</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-1-of-3">
+              <div class="most-card">
+                <div class=most-card__number><h3>10</h3></div>
+                <div class="most-card__image">
+                  <img src="images/fan3.jpg" alt="">
+                </div>
+                <div class="most-card__description">
+                  <p>
+                    Usha MIST AIR DUOS 400 mm 3 Blade Table Fan  (PURPLE COLOR)
+                  </p>
+                  <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half"></i></p>
+                  <p>Bought by 4899 people</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      
+    </section>
+    <section class="section-reviews" id="section-reviews">
+      <h2 class = "sechead">
+        Our Happy Customers
+      </h2>
+
+      <div class="section-reviews__reviews">
+        <div class="review review--left">
+          <figure class="review__frame">
+            <img src="images/peter-parker.jpg" alt="" class = "review__image">
+            <figcaption class="review__name">
+              <span class = "review__name--first">Peter</span>
+              <span class = "review__name--last">Parker</span>
+            </figcaption>
+          </figure> 
+          <div class="review__text">
+            I have had one of the best experiences shopping here. 
+            Products are delivered within one day in my region.
+            I have rarely received faulty products.
+          </div>
+        </div>
+        <div class="review review--right">
+          <figure class="review__frame">
+            <img src="images/mary-jane.jpg" alt="" class = "review__image">
+            <figcaption class="review__name">
+              <span class = "review__name--first">Mary</span>
+              <span class = "review__name--last">Jane</span>
+            </figcaption>
+          </figure> 
+          <div class="review__text">
+            I would recommend this as the best destination to buy anything.
+            I have never had a single problem with whatever I bought here.
+          </div>
+        </div>
+        <div class="review review--left">
+          <figure class="review__frame">
+            <img src="images/gwen-stacy.jpg" alt="" class = "review__image">
+            <figcaption class="review__name">
+              <span class = "review__name--first">Gwen</span>
+              <span class = "review__name--last">Stacy</span>
+            </figcaption>
+          </figure> 
+          <div class="review__text">
+            I honestly never had any complains with Phibuys.
+            This is probably the best shopping site especially for electronics.
+            The website is always ready to help its customers.
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section-form" id="section-form">
+      <h2 class="sechead">
+        Write a review
+      </h2>
+      
+      <div class="reviewform">
+        <div class="reviewform__write">
+          <form action="#" class= "form">
+
+            <div class="form__group">
+              <input type="text" class="form__input" placeholder="First Name" id="fname" required >
+              <label for="fname" class="form__label">First Name</label>
+            </div>
+            <div class="form__group">
+              <input type="text" class="form__input" placeholder="Last Name" id="lname" required>
+              <label for="lname" class="form__label">Last Name</label>
+            </div>
+            <div class="form__group">
+              <textarea class="form__input" placeholder="Write your review" id = "rev" required></textarea>
+              <label for="rev" class="form__label">Review</label>
+            </div>
+            <div class="form__group">
+              <input type="submit" value = "Submit Review" class="form__submit" id="submit">
+            </div>
+          </form>
+          
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="rows">
+        <div class="col-1-of-2">
+          <a href="#" class="footer__button">
+            Terms and Conditions
+          </a>
+          <a href="#" class="footer__button">
+            Privacy Policy
+          </a>
+          <a href="#"  class="footer__button">
+            Contact us
+          </a>
+        </div>
+        <div class="col-1-of-2">
+            <div class="logo footer_logo">
+                <img
+                    class="logo--pic"
+                    src="images/Icon-Startup.png"
+                    alt="logo"
+                  />
+                <h2 class="logo--text">
+                    buys
+                </h2>
+                <i class="fas fa-shopping-cart fa-2x logo--icon"></i>
+          </div>
+            <div class="footer__text">
+              <p>Copyright: &copy;Shubhraneel Pal</p>
+              <p>Phibuys-The Online store</p>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="topbtn">
+      <a href="#section-intro" class="topbtn__button"><i class="fas fa-angle-double-up fa-4x"></i></a>
+    </div>
+
+    <div class="popup" id="popup-1">
+      <div class="popup__content">
+        <img src="images/hp-omen.jpg" alt="" class="popup__image">
+        <div class="popup__text">
+          <h3 class="popup__heading">Terms and Conditions</h3>
+          <ul class="popup__list">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Eaque vero natus nemo illo eligendi dignissimos itaque, laboriosam architecto quasi dolor quam expedita debitis quas distinctio rem earum et ullam consequatur.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae, iusto rerum distinctio repellendus.</li>
+            <li>Quam provident laboriosam qui minima deleniti nisi illum, numquam, porro cumque facilis ut totam. Eos, voluptates.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ad voluptatibus repellat quibusdam ut voluptas conse.</li>
+          </ul>
+        </div>
+        <a href="#section-surprise" class="popup__close">
+          &times;
+        </a>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-2">
+      <div class="popup__content">
+        <img src="images/ac.jpg" alt="" class="popup__image">
+        <div class="popup__text">
+          <h3 class="popup__heading">Terms and Conditions</h3>
+          <ul class="popup__list">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Eaque vero natus nemo illo eligendi dignissimos itaque, laboriosam architecto quasi dolor quam expedita debitis quas distinctio rem earum et ullam consequatur.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae, iusto rerum distinctio repellendus.</li>
+            <li>Quam provident laboriosam qui minima deleniti nisi illum, numquam, porro cumque facilis ut totam. Eos, voluptates.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ad voluptatibus repellat quibusdam ut voluptas conse.</li>
+          </ul>
+        </div>
+        <a href="#section-surprise" class="popup__close">
+          &times;
+        </a>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-3">
+      <div class="popup__content">
+        <img src="images/iphone.jpg" alt="" class="popup__image">
+        <div class="popup__text">
+          <h3 class="popup__heading">Terms and Conditions</h3>
+          <ul class="popup__list">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Eaque vero natus nemo illo eligendi dignissimos itaque, laboriosam architecto quasi dolor quam expedita debitis quas distinctio rem earum et ullam consequatur.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae, iusto rerum distinctio repellendus.</li>
+            <li>Quam provident laboriosam qui minima deleniti nisi illum, numquam, porro cumque facilis ut totam. Eos, voluptates.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ad voluptatibus repellat quibusdam ut voluptas conse.</li>
+          </ul>
+        </div>
+        <a href="#section-surprise" class="popup__close">
+          &times;
+        </a>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-4">
+      <div class="popup__content">
+        <img src="images/nike.jpg" alt="" class="popup__image">
+        <div class="popup__text">
+          <h3 class="popup__heading">Terms and Conditions</h3>
+          <ul class="popup__list">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Eaque vero natus nemo illo eligendi dignissimos itaque, laboriosam architecto quasi dolor quam expedita debitis quas distinctio rem earum et ullam consequatur.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam recusandae, iusto rerum distinctio repellendus.</li>
+            <li>Quam provident laboriosam qui minima deleniti nisi illum, numquam, porro cumque facilis ut totam. Eos, voluptates.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex ad voluptatibus repellat quibusdam ut voluptas conse.</li>
+          </ul>
+        </div>
+        <a href="#section-surprise" class="popup__close">
+          &times;
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

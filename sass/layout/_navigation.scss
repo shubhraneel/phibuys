@@ -1,0 +1,267 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.5rem;
+  z-index: 1000;
+  background-color: rgba(black, 0.6);
+
+  @include clearfix;
+
+  &__logo {
+    float: left;
+    margin: 1rem;
+  }
+
+  &__button {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      float: right;
+      margin: 1.5rem 0.3rem;
+      padding: 0.6rem 0.7rem;
+      border-radius: 100px;
+      border-color: rgb(158, 158, 158);
+      border-style: solid;
+      border-width: 0.1rem;
+      background-color: transparent;
+      color: white;
+      background-image: linear-gradient(
+        to top,
+        white 0%,
+        white 50%,
+        transparent 50%
+      );
+      background-size: 100% 200%;
+      background-position: top;
+      transition: all 0.4s ease-in-out;
+      font-size: 1.3rem;
+
+      @include respond(tab-port) {
+        visibility: hidden;
+      }
+    }
+
+    &#{&}--covid {
+      background-color: rgba(255, 0, 85, 0.5);
+    }
+
+    &--covid {
+    &,
+    &--covid:link,
+    &--covid:visited {
+      animation: covid 0.5s 10;
+      animation-direction: alternate-reverse; 
+      animation-play-state: paused;
+      border: none;   
+    }   
+
+      #color-toggle--dark:checked ~ .navigation &, 
+      #color-toggle--light:checked ~ .navigation & {
+        &, &:link, &:visited {
+          animation-play-state: running;
+          
+          @include respond(phone) {
+            animation-play-state: paused;
+
+          }
+        }
+      }
+    }
+
+    &:hover {
+      background-position: bottom;
+      color: black;
+    }
+
+    &--mobile {
+      &,
+    &:link,
+    &:visited {
+      display: block;
+      text-decoration: none;
+      color: rgb(58, 58, 58);
+      padding: 2rem;
+      font-size: 3rem;
+      border-radius: 10px;
+      margin: 1rem;
+      margin-right: 3rem;
+      background-color: rgb(200, 147, 189);
+      transition: all .2s;
+    }
+
+      &.navigation__button--covid {
+        &,
+        &:link,
+        &:visited {
+          background-color: rgba(255, 0, 85, 0.5);
+        }
+      }
+
+      
+
+      #color-toggle--dark:checked ~ .navigation &{
+        &,
+        &:link,
+        &:visited {
+          background-color: transparent;
+        color: white;
+        border-width: 2px;
+        border-style: solid;
+        border-color: white;
+        }
+
+        &.navigation__button--covid {
+          background-color: rgba(255, 0, 85, 0.5);
+        }
+  
+      }
+    }
+
+    &--mobile:active {
+      background-color: rgb(194, 38, 181);
+      color: white;
+
+      #color-dark--toggle:checked ~ .navigation & {
+        &, &:link, &:visited {
+          background-color: white;
+          color: black;
+        }
+      } 
+    }
+  }
+
+  
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__toggler {
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 10000;
+    background-color: rgba(185, 0, 46, 0.7);
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px rgba(black, 0.8);
+    transition: all .3s;
+    visibility: hidden;
+
+    @include respond(tab-port) {
+      visibility: visible;
+    }
+  }
+
+  &__burger {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 0.4rem;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 3.5px 3.5px 3.5px rgba(black, 0.8);
+    transition: all .3s;
+
+    &:before,
+    &:after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      left: 0;
+      border-radius: 100px;
+      box-shadow: 3.5px 3.5px 3.5px rgba(black, 0.8);
+      transition: all .3s;
+    }
+
+    &:before {
+      top: -1rem;
+    }
+
+    &:after {
+      top: 1rem;
+    }
+  }
+
+  &__checkbox:checked + &__toggler {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &__checkbox:checked + &__toggler &__burger {
+    background-color: transparent;
+    &,
+    &:after,
+    &:before {
+      box-shadow: none;
+      color: rgb(53, 53, 53);
+
+      &:active {
+        color: rgb(150, 150, 150);
+      }
+    }
+
+    &:after {
+      transform: translateY(-1rem) rotate(-45deg);
+    } 
+
+    &:before {
+      transform: translateY(1rem) rotate(45deg);
+    }
+  }
+
+  &__checkbox:checked ~ .navigation__menu .navigation__button--mobile.navigation__button--covid {
+    &, &:link, &:visited {
+        animation-play-state: running !important;
+    }
+  }
+
+  &__menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(black, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+  }
+
+  &__list {
+    width: 75vw;
+    height: 100vh;
+    transform: translateX(100vw);
+    background-image:linear-gradient(to bottom, rgb(156, 156, 156) 0%, rgb(156, 156, 156) 7rem, white 7rem, white 80%, rgb(251, 31, 97));
+    padding: 1rem;
+    padding-top: 7.5rem;
+    visibility: hidden;
+    opacity: 1;
+    transition: all .4s;
+
+    #color-toggle--dark:checked ~ .navigation & {
+      background-image: linear-gradient(to bottom, rgb(25, 25, 25) 0, rgb(25, 25, 25) 80%, rgb(35, 35, 35) 80%);
+    }
+  }
+
+  &__checkbox:checked ~ &__menu {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__checkbox:checked ~ &__menu &__list {
+    visibility: visible;
+    transform: translateX(25vw);
+    // opacity: 1;
+  }
+
+}

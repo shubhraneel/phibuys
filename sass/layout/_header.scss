@@ -1,0 +1,65 @@
+.header {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .heading {
+    font-family: "Ubuntu", sans-serif;
+    color: #ddd;
+    backface-visibility: hidden;
+  
+    &__primary {
+      @include anim(8rem, zoom-out);
+  
+      @media (max-width: 900px) {
+        font-size: 6rem;
+      }
+    }
+  
+    &__sub {
+      @include anim(3rem, zoom-in);
+  
+      @media (max-width: 900px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  
+  .surprise {
+
+    margin-top: 20%;
+    &__button {
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: white;
+            border-style: solid;
+            border-width: 2px;
+            border-color: white;
+            border-radius: 20px;
+            padding: 1rem 1.5rem;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 40%,
+        white 50%,
+        black 60%
+      );
+      background-size: 260% 100%;
+      transition: all .4s;
+        }
+
+        &:hover {
+            background-position: right;
+            transition: all .2s;
+        }
+      
+    }
+
+  }
+  
+
+}
+

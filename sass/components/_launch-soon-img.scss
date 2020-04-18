@@ -1,0 +1,203 @@
+.launch-soon {
+    &__row {
+      position: relative;
+      @include clearfix;
+      background-color: rgba(0, 0, 0, 0.281); 
+
+      #color-toggle--dark:checked ~ .section-launchsoon &{
+        background-color: rgb(40, 40, 40);
+      }
+
+      @include respond(tab-land) {
+        margin: 2rem 0;
+      }
+    }
+
+    &__comments {
+      margin: auto;
+      padding: 3% 10%;
+      text-align: left;
+      height:37rem;
+      display: table-cell;
+      vertical-align: middle;
+      background-color: white;
+      color: rgb(40, 40, 40);
+
+      #color-toggle--dark:checked ~ .section-launchsoon &{
+        background-color: rgb(10, 10, 10);
+        color: rgb(200, 200, 200);
+      }
+
+      &--right {
+        position: relative;
+        left: 50%;
+
+        @include respond(tab-land) {
+          position: static;
+          left: 0;
+          background-color: rgb(200, 200, 200);
+        } 
+      }
+
+      &--left {
+
+        @include respond(tab-land)
+        {
+          background-color: rgba(0, 0, 0, 0.281);
+        color: white;
+        }
+        
+      }
+
+      @include respond(tab-land){
+        height: 10rem;
+      }
+
+      @include respond(phone) {
+        height: auto;
+        padding-top: 5rem;
+      }
+
+    }
+
+    &__images {
+      position: relative;
+      height: 0;
+      background-color: rgba(0, 0, 0, 0.281);
+
+      &--left {
+        position: relative;
+        right: 50%;
+
+        @include respond(tab-land) {
+          position: static;
+          right: 0;
+          background-color: rgb(200, 200, 200);
+
+          #color-toggle--dark:checked ~ .section-launchsoon &{
+            background-color: rgb(20, 20, 20);
+          }
+
+        }
+
+      }
+
+      &:hover .launch-soon__img:not(:hover){
+      transform: scale(0.9);
+      filter: blur(4px) brightness(60%);
+      }
+
+      @include respond(tab-land) {
+        height: 28rem;
+      } 
+
+      @include respond(phone) {
+        height: auto;
+        padding-bottom: 7rem;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+    }
+
+    &__img {
+      position: absolute;
+    width: 18rem;
+    box-shadow: -3px -3px 20px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+
+    @include respond(tab-land) {
+      position: static;
+      margin: 1rem;
+      margin-top: 3rem;
+    }
+
+    @include respond(tab-port) {
+          margin: 0;
+          margin-top: 3rem;
+          width: 16rem;
+        }
+
+        @include respond(phone) {
+          width: 70%;
+        }
+    
+
+    
+
+    &--1 {
+      z-index: 4;
+      top: 5rem;
+      left: 8%;
+
+      &:hover {
+        @include hoveraction();
+      }
+      @include respond(phone) {
+        position: static;
+        top: 0;
+      }
+      
+    }
+    &--2 {
+      z-index: 3;
+      top: 12rem;
+      left: 25%;
+
+      &:hover {
+        @include hoveraction();
+      }
+      @include respond(tab-land) {
+      position: relative;
+      top: 1rem;
+      left: 0;
+    }
+      @include respond(phone) {
+        position: static;
+        top: 0;
+      }
+    }
+    &--3 {
+      z-index: 2;
+      top: 5rem;
+      left: 42%;
+
+      &:hover {
+        @include hoveraction();
+      }
+
+      @include respond(tab-land) {
+      position: relative;
+      top: 2rem;
+      left: 0;
+      }
+
+      @include respond(phone) {
+        position: static;
+        top: 0;
+      }
+    
+    }
+
+    &--4 {
+      z-index: 1;
+      top: 12rem;
+      left: 59%;
+
+      &:hover {
+        @include hoveraction();
+      }
+      @include respond(tab-land) {
+      position: relative;
+      top: 3rem;
+      left: 0;
+      }
+
+      @include respond(phone) {
+        position: static;
+        top: 0;
+      }
+    
+    }
+  
+    }
+  }

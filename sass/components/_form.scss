@@ -1,0 +1,86 @@
+.form {
+  display: inline-block;
+  text-align: left;
+
+  &__group {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    padding-right: 10rem;
+    border-color: transparent;
+    border-radius: 100px;
+    background-color: rgba(white, 0.8);
+    transition: all .4s;
+    overflow: hidden;
+    resize: none;
+
+    &:not(:placeholder-shown) {
+        background-color: rgba(rgb(0, 98, 255), 0.7);
+    }
+    &:focus {
+      outline: none;
+      background-color: rgba(green, 0.3);
+      box-shadow: 0 0 3px 3px green;
+      color: white;
+
+      &:invalid {
+        background-color: rgba(red, 0.3);
+        box-shadow: 0 0 3px 3px red;
+
+        &::placeholder {
+          color: rgb(230, 230, 230);
+        }
+      }
+    }
+
+  }
+
+  &__label {
+      position: absolute;
+      top: 1.2rem;
+      right: 1rem;
+      transform: translateX(0) scale(0.8);
+      transition: all 0.4s;
+      opacity: 1;
+      color:rgb(230, 230, 230);
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;    
+    transform: translateX(-20rem) scale(1);
+  }
+
+  &__submit {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    background-color: rgba(0, 120, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 1px rgba(black, 0.8);
+    color: white;
+    transition: all .4s;
+
+    &:hover {
+      background-color: rgba(lighten(rgb(0, 120, 255), 20%), 0.8);
+      box-shadow: 0 4px 2px rgba(black, 0.8);
+      transform: translateY(-0.5rem) scale(1.03);
+
+    }
+
+    &:active {
+      box-shadow: 0 1px 0.5px rgba(black, 0.8); 
+      background-color: rgba(darken(rgb(0, 120, 255), 20%), 0.8);
+      transform: translateY(0.2rem) scale(0.95);
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+}

@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: Montserrat, sans-serif;
+  color: #555;
+}
+
+.sechead {
+  font-family: $font-mont;
+  margin: 5rem 0 7rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+}
+
+p {
+  @include respond(tab-land) {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,257 @@
+.section-intro {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/online-shopping.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  #color-toggle--dark:checked ~ & {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../images/online-shopping.jpg);
+  }
+}
+
+.section-launchsoon {
+  @include padding();
+
+  .sechead {
+    color: $color-pink;
+
+    #color-toggle--dark:checked ~ & {
+      color: lighten($color-pink, 30%);
+    }
+  }
+
+  @include respond(laptop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include respond(tab-land) {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 1050px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include respond(tab-port) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #color-toggle--dark:checked ~ & {
+    background-color: rgb(10, 10, 10);
+  }
+  
+}
+
+.section-surprise {
+  background-image: linear-gradient(
+    to top right,
+    $color-grad-start,
+    $color-grad-end
+  );
+  .sechead {
+    color: white;
+  }
+
+  @include padding();
+  padding-bottom: 1.5rem;
+
+  .surprise-cards {
+    margin-bottom: 1rem;
+    .col-lg-3 {
+      height: 43rem;
+    }
+  }
+
+  @include respond(tab-land) {
+    padding-bottom: 6rem;
+  }
+
+  @include respond(tab-port) {
+    margin-top: -2rem;
+  }
+
+  #color-toggle--dark:checked ~ & {
+    background-image: linear-gradient(to top right, rgb(0, 17, 75), rgb(65, 0, 61));
+  }
+}
+
+
+
+.section-mostBought {
+  @include padding();
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: #eee;
+
+  @include respond(tab-port) {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  @include respond(phone) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .sechead {
+    font-family: Ubuntu, sans-serif;
+    color: rgb(195, 0, 255);
+
+    #color-toggle--dark:checked ~ & {
+      color: lighten(rgb(195, 0, 255), 30%);
+    }
+  }
+
+  .rows--last {
+    width: 75%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  .rows {
+    
+    &:hover .most-card:not(:hover) {
+      transform: scale(0.9);
+      z-index: 1;
+      &::before {
+        opacity: 100%;
+      }
+      filter: blur(5px) brightness(80%);
+      box-shadow: none;
+    }
+  }
+
+  #color-toggle--dark:checked ~ & {
+    background-color: rgb(10, 10, 10);
+  }
+}
+
+.section-reviews {
+  @include padding();
+  padding-top: 0;
+  padding-left: 8%;
+  padding-right: 8%;
+  background-image: linear-gradient(
+      to right,
+      rgba(white, 0.3) 8%,
+      transparent 8%,
+      transparent 92%,
+      rgba(white, 0.3) 92%
+    ),
+    linear-gradient(
+      to right bottom,
+      rgba(lighten($color-grad-start, 20%), 0.2),
+      rgba(lighten($color-grad-end, 20%), 0.2)
+    ),
+    url(../images/shopping-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  .sechead {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 5%;
+    padding: 5%;
+    background-color: rgba(rgb(112, 74, 143), 0.6);
+
+    #color-toggle--dark:checked ~ & {
+      background-color: rgba(darken(rgb(112, 74, 143), 20%), 0.8);
+    }
+  }
+
+  @include clearfix();
+
+  #color-toggle--dark:checked ~ & {
+    background-image: linear-gradient(
+      to right,
+      rgba(black, 0.5) 8%,
+      transparent 8%,
+      transparent 92%,
+      rgba(black, 0.5) 92%
+    ),
+    linear-gradient(
+      to right bottom,
+      rgba(darken($color-grad-start, 20%), 0.7),
+      rgba(darken($color-grad-end, 20%), 0.7)
+    ),
+    url(../images/shopping-bg.jpg);
+  }
+}
+
+.section-form {
+  @include padding;
+
+  @include respond(tab-port) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #color-toggle--dark:checked ~ & {
+    background-color: rgb(10, 10, 10);
+
+    .sechead {
+      color: rgb(212, 211, 211);
+    }
+  }
+
+
+.reviewform {
+  width: 70rem;
+  height: 50rem;
+  background-image: url(../images/online-shopping-2.jpg);
+  background-size: cover;
+  margin: 4rem auto;
+  clip-path: polygon(0 40%, 12% 0, 100% 0, 100% 60%, 88% 100%, 0% 100%);
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+
+  #color-toggle--dark:checked ~ .section-form & {
+    -webkit-backdrop-filter: brightness(0.6);
+    backdrop-filter: brightness(0.6);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(black, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
+  }
+
+  &__write {
+    z-index: 2;
+    height: 100%;
+    position: relative;
+    padding: 14% 0 0 7%;
+  }
+
+  @include respond(phone) {
+    width: 80%;
+    clip-path: none;
+    height: 40rem;
+
+    &::after {
+      clip-path: none;
+    }
+
+    &__write {
+      padding: 0;
+      padding-top: 5rem;
+    }
+  }
+}
+}

@@ -1,0 +1,114 @@
+.color-toggle {
+    visibility: hidden;
+    display: none;
+}
+
+.color-mode {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+        z-index: 20000;
+        top: 0;
+        bottom: 0;
+    background-image: linear-gradient(to bottom, white 0, white 50%, black 50%);
+    transition: all 1s;
+    &__button {
+        position: absolute;
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        border-width: 5px;
+        border-style: solid;
+        line-height: 1.2;
+
+        @include respond(tab-land) {
+            width: 20rem;
+            height: 20rem;
+        }
+
+        @include respond(phone) {
+            width: 30rem;
+            height: 30rem;
+        }
+
+        &--text {
+            display: block;
+            width: 10rem;
+            position: absolute;
+            font-size: 3rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include respond(tab-land) {
+                width: 15rem;
+                height: 15rem;
+                font-size: 4rem;
+            }
+
+            @include respond(phone) {
+                width: 20rem;
+                height: 20rem;
+                font-size: 6rem;
+            }
+        }
+
+        &--light {
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-color: black;
+            color: black;
+            transition: all .4s;
+            animation-name: sweep-in-top;
+            animation-timing-function: cubic-bezier(0,.62,.66,1.11);
+            animation-duration: 1s;
+
+            @include respond(phone) {
+                top: 25%;
+                left: 50%;
+            }
+
+            &:hover,
+            &:active {
+                background-color: black;
+                color: white;
+            }
+        }
+
+        &--dark {
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-color: white;
+            color: white;
+            transition: all .4s;
+            animation-name: sweep-in-bottom;
+            animation-timing-function: cubic-bezier(0,.62,.66,1.11);
+            animation-duration: 1s;
+
+            @include respond(phone) {
+                top: 75%;
+                left: 50%;
+            }
+
+            &:hover,
+            &:active {
+                background-color: white;
+                color: black;
+            }
+        }
+
+    }
+}
+
+#color-toggle--light:checked ~ .color-mode {
+    transform: translateX(100%);
+    visibility: hidden;
+}
+
+#color-toggle--dark:checked ~ .color-mode {
+    transform: translateX(-100%);
+    visibility: hidden;
+}

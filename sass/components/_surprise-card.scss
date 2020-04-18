@@ -1,0 +1,115 @@
+.surprise-card {
+    display: inline-block;
+    width: 100%;
+    box-shadow: 5px 5px 20px 3px black;
+    background-color: white;
+    color: white;
+
+    &__img-top {
+        display: inline-block;
+        width: 100%;
+      height: 20rem;
+      object-fit: contain;
+      padding: 1.5rem;
+    }
+
+    &__header {
+        background-color: rgb(60, 60, 60);
+        padding: 0.8rem;
+
+        #color-toggle--dark:checked ~ .section-surprise &{
+          background-color: rgb(30, 30, 30);
+        }
+    }
+
+    &__body {
+        background-color: rgb(160, 160, 160);
+        padding-bottom: 0;
+        padding-top: 5%;
+
+        #color-toggle--dark:checked ~ .section-surprise &{
+          background-color: rgb(60, 60, 60);
+        }
+    }
+
+    &__knw-mr {
+        height: 0;
+      overflow: hidden;
+      transition: all 1s;
+      
+      @include respond(tab-land) {
+          height: 5rem;
+      }
+    }
+
+    &__para {
+        margin-top: 2%;
+    }
+
+    .btn {
+      margin-top: 1rem;
+    }
+
+    &:hover &__knw-mr {
+    height: 5rem;
+  }
+    &__original-price {
+    text-decoration: line-through;
+    margin-right: 1rem;
+
+    @include respond(tab-land) {
+        margin-right: 0.1rem;
+    }
+  }
+
+  &__button {
+        &,
+        &:link,
+        &:visited {
+            
+            text-decoration: none;
+            color: white;
+            padding: 1rem 1.5rem 0.5rem;
+      background-image: linear-gradient(
+        120deg,
+        #555 0%,
+        #555 40%,
+        white 50%
+      );
+      background-size: 260% 100%;
+      transition: all .4s;
+        }
+
+        &:hover {
+            background-position: right;
+            transition: all .2s;
+            color: black;
+        }
+      
+    }
+
+    @include respond(tab-port) {
+        width: 75%;
+    }
+}
+
+// 
+
+//   .card {
+//     
+
+//     img {
+      
+//     }
+
+//     .card-body {
+//       
+//     }
+//     .knw-mr {
+//       
+//     }
+
+//     p {
+//     }
+//     
+//     
