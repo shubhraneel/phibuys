@@ -4,6 +4,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  @media (max-aspect-ratio: 1/1) {
+    top: 40%;
+  } 
+
   .heading {
     font-family: "Ubuntu", sans-serif;
     color: #ddd;
@@ -12,15 +16,17 @@
     &__primary {
       @include anim(8rem, zoom-out);
   
-      @media (max-width: 900px) {
+      @include respond(tab-port) {
         font-size: 6rem;
       }
+
+      
     }
   
     &__sub {
       @include anim(3rem, zoom-in);
   
-      @media (max-width: 900px) {
+      @include respond(tab-port) {
         font-size: 2rem;
       }
     }
@@ -49,6 +55,10 @@
       );
       background-size: 260% 100%;
       transition: all .4s;
+        }
+
+        @include respond(phone) {
+          font-size: 2rem;
         }
 
         &:hover {

@@ -11,5 +11,13 @@
   "dependencies": {},
   "devDependencies": {
     "node-sass": "^4.13.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhraneel/phibuys.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shubhraneel/phibuys/issues"
+  },
+  "homepage": "https://github.com/shubhraneel/phibuys#readme"
 }
