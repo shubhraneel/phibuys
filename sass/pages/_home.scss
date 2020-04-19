@@ -92,7 +92,7 @@
   padding-right: 10%;
   background-color: #eee;
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     padding-left: 20%;
     padding-right: 20%;
   }
@@ -114,7 +114,7 @@
   .rows--last {
     width: 75%;
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       width: 100%;
     }
   }

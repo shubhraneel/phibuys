@@ -16,7 +16,7 @@
       margin-right: $gutter-horizontal;
     }
 
-    @include respond(tab-port) {
+    @media (max-width: 1300px) {
       width: 100% !important;
     }
   }
