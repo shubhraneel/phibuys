@@ -92,7 +92,7 @@
   padding-right: 10%;
   background-color: #eee;
 
-  @include respond(tab-land) {
+  @media (max-width: 1300px) {
     padding-left: 20%;
     padding-right: 20%;
   }
