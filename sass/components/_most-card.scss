@@ -1,96 +1,96 @@
 .most-card {
-    display: inline-block;
-    width: 100%;
-    margin: 10px 0;
+  display: inline-block;
+  width: 100%;
+  margin: 10px 0;
+  background-image: linear-gradient(
+    to top right,
+    transparent 0%,
+    transparent 25%,
+    rgba(173, 159, 241, 0.58) 25%,
+    rgba(173, 159, 241, 0.58) 50%,
+    transparent 50%
+  );
+  background-size: 200% 200%;
+  background-position: bottom left;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  padding-top: 1rem;
+  transition: all 0.2s;
+  color: rgb(24, 24, 24);
+  #color-toggle--dark:checked ~ .section-mostBought & {
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.6);
+    color: rgb(226, 226, 226);
+  }
+
+  &__number {
+    h3 {
+      font-size: 5rem;
+      line-height: 1.2;
+      font-weight: 700;
+      font-family: Montserrat, sans-serif;
+    }
+  }
+  &--big {
+    padding: 0;
+  }
+
+  &__description {
+    margin: 5% 10%;
+  }
+
+  &__image {
+    padding: 5% 5%;
+    height: 25rem;
+
+    img {
+      display: inline-block;
+      height: 25rem;
+      clip-path: circle(47% at 50% 50%);
+    }
+
+    @include respond(laptop) {
+      height: 21rem;
+
+      img {
+        height: 19rem;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.2) translateY(-2rem);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.603);
+    //   background-image: linear-gradient(
+    //   to top right,
+    //   $color-grad-start,
+    //   $color-grad-end
+    // );
     background-image: linear-gradient(
       to top right,
       transparent 0%,
       transparent 25%,
-      rgba(173, 159, 241, 0.58) 25%,
-      rgba(173, 159, 241, 0.58) 50%,
+      rgb(181, 88, 243) 25%,
+      rgb(181, 88, 243) 50%,
       transparent 50%
     );
-    background-size: 200% 200%;
-    background-position: bottom left;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    padding-top: 1rem;
-    transition: all 0.2s;
-    color: rgb(24, 24, 24);
-    #color-toggle--dark:checked ~ .section-mostBought & {
-      box-shadow: 0 0 20px rgba(128, 128, 128, 0.6);
-      color: rgb(226, 226, 226);
-    }
-
-    &__number {
-      h3 {
-        font-size: 5rem;
-      line-height: 1.2;
-      font-weight: 700;
-      font-family: Montserrat, sans-serif;
-      }
-    }
-    &--big {
-      padding: 0;
-    }
-
-    &__description {
-      margin: 5% 10%;
-    }
-
-    &__image {
-      padding: 5% 5%;
-      height: 25rem;
-
-      img {
-        display: inline-block;
-        height: 25rem;
-        clip-path: circle(47% at 50% 50%);
-      }
-
-      @include respond(laptop) {
-        height: 21rem;
-
-        img {
-          height: 19rem;
-        }
-      }
-    }
-
-    &:hover {
-      transform: scale(1.2) translateY(-2rem);
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.603);
-      //   background-image: linear-gradient(
-      //   to top right,
-      //   $color-grad-start,
-      //   $color-grad-end
-      // );
-      background-image: linear-gradient(
-        to top right,
-        transparent 0%,
-        transparent 25%,
-        rgb(181, 88, 243) 25%,
-        rgb(181, 88, 243) 50%,
-        transparent 50%
-      );
-      background-position: 50%;
-    }
-
-    &::before {
-      content: "";
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      border-radius: 1rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      background-image: radial-gradient(
-        rgba(255, 255, 255, 0.2),
-        rgba(255, 255, 255, 0.8)
-      );
-      opacity: 0;
-      transition: all 0.4s;
-    }
+    background-position: 50%;
   }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.8)
+    );
+    opacity: 0;
+    transition: all 0.4s;
+  }
+}

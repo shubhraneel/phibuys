@@ -1,15 +1,15 @@
 .section-intro {
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/online-shopping.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/online-shopping.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
 
   #color-toggle--dark:checked ~ & {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../images/online-shopping.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+      url(../images/online-shopping.jpg);
   }
-
-  
 }
 
 .section-launchsoon {
@@ -47,7 +47,6 @@
   #color-toggle--dark:checked ~ & {
     background-color: rgb(10, 10, 10);
   }
-  
 }
 
 .section-surprise {
@@ -79,11 +78,13 @@
   }
 
   #color-toggle--dark:checked ~ & {
-    background-image: linear-gradient(to top right, rgb(0, 17, 75), rgb(65, 0, 61));
+    background-image: linear-gradient(
+      to top right,
+      rgb(0, 17, 75),
+      rgb(65, 0, 61)
+    );
   }
 }
-
-
 
 .section-mostBought {
   @include padding();
@@ -119,7 +120,6 @@
   }
 
   .rows {
-    
     &:hover .most-card:not(:hover) {
       transform: scale(0.9);
       z-index: 1;
@@ -172,18 +172,18 @@
 
   #color-toggle--dark:checked ~ & {
     background-image: linear-gradient(
-      to right,
-      rgba(black, 0.5) 8%,
-      transparent 8%,
-      transparent 92%,
-      rgba(black, 0.5) 92%
-    ),
-    linear-gradient(
-      to right bottom,
-      rgba(darken($color-grad-start, 20%), 0.7),
-      rgba(darken($color-grad-end, 20%), 0.7)
-    ),
-    url(../images/shopping-bg.jpg);
+        to right,
+        rgba(black, 0.5) 8%,
+        transparent 8%,
+        transparent 92%,
+        rgba(black, 0.5) 92%
+      ),
+      linear-gradient(
+        to right bottom,
+        rgba(darken($color-grad-start, 20%), 0.7),
+        rgba(darken($color-grad-end, 20%), 0.7)
+      ),
+      url(../images/shopping-bg.jpg);
   }
 }
 
@@ -203,57 +203,56 @@
     }
   }
 
-
-.reviewform {
-  width: 70rem;
-  height: 50rem;
-  background-image: url(../images/online-shopping-2.jpg);
-  background-size: cover;
-  margin: 4rem auto;
-  clip-path: polygon(0 40%, 12% 0, 100% 0, 100% 60%, 88% 100%, 0% 100%);
-  text-align: center;
-  position: relative;
-  border-radius: 10px;
-
-  #color-toggle--dark:checked ~ .section-form & {
-    -webkit-backdrop-filter: brightness(0.6);
-    backdrop-filter: brightness(0.6);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(black, 0.5);
-    border-radius: 10px;
-    z-index: 1;
-    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
-  }
-
-  &__write {
-    z-index: 2;
-    height: 100%;
+  .reviewform {
+    width: 70rem;
+    height: 50rem;
+    background-image: url(../images/online-shopping-2.jpg);
+    background-size: cover;
+    margin: 4rem auto;
+    clip-path: polygon(0 40%, 12% 0, 100% 0, 100% 60%, 88% 100%, 0% 100%);
+    text-align: center;
     position: relative;
-    padding: 14% 0 0 7%;
-  }
+    border-radius: 10px;
 
-  @include respond(phone) {
-    width: 80%;
-    clip-path: none;
-    height: 40rem;
+    #color-toggle--dark:checked ~ .section-form & {
+      -webkit-backdrop-filter: brightness(0.6);
+      backdrop-filter: brightness(0.6);
+    }
 
     &::after {
-      clip-path: none;
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(black, 0.5);
+      border-radius: 10px;
+      z-index: 1;
+      clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
     }
 
     &__write {
-      padding: 0;
-      padding-top: 5rem;
+      z-index: 2;
+      height: 100%;
+      position: relative;
+      padding: 14% 0 0 7%;
+    }
+
+    @include respond(phone) {
+      width: 80%;
+      clip-path: none;
+      height: 40rem;
+
+      &::after {
+        clip-path: none;
+      }
+
+      &__write {
+        padding: 0;
+        padding-top: 5rem;
+      }
     }
   }
-}
 }

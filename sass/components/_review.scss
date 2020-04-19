@@ -1,112 +1,104 @@
 .review {
-    width: 100%;
-    background-color: darken(rgba(20, 20, 100, 0.8), 10%);
-    padding: 2rem 3rem 1rem;
-    @include clearfix();
-    margin: 3rem 0;
-    box-shadow: 10px 10px 0 #000;
+  width: 100%;
+  background-color: darken(rgba(20, 20, 100, 0.8), 10%);
+  padding: 2rem 3rem 1rem;
+  @include clearfix();
+  margin: 3rem 0;
+  box-shadow: 10px 10px 0 #000;
 
-    #color-toggle--dark:checked ~ .section-reviews & {
-        background-color: darken(rgba(20, 20, 100, 0.9), 15%);
+  #color-toggle--dark:checked ~ .section-reviews & {
+    background-color: darken(rgba(20, 20, 100, 0.9), 15%);
+  }
+
+  @media (min-width: 768px) {
+    & {
+      width: 75%;
     }
 
-    @media (min-width: 768px) {
+    &--left {
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+      padding-left: 8%;
+      float: right;
+      transition: all 0.4s;
 
-        & {
-            width:75%;
-        }
-
-        &--left {
-            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
-            padding-left: 8%;
-            float: right;
-            transition: all .4s;
-
-            &:hover{
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-            }
-        }
-    
-        &--right {
-            clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
-            padding-right: 8%;
-            float:left;
-            transition: all .4s;
-
-            &:hover{
-                clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-            }
-        }
-
-    }
-    
-
-    &__frame {
-        position: relative;
-        width: 10rem;
-        height: 10rem;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        float: left;
-        transform: translateX(-1rem);
-        clip-path: circle(50% at 50% 50%);
-        overflow: hidden;
+      &:hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+      }
     }
 
+    &--right {
+      clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+      padding-right: 8%;
+      float: left;
+      transition: all 0.4s;
 
-
-    &__image {
-        height: 100%;
-        transform: scale(1.1);
-        transition: all .4s ease-out;
+      &:hover {
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+      }
     }
-    &__text {
-       text-align: left;
-       color: white;
-    }
+  }
 
-    &__name {
+  &__frame {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    float: left;
+    transform: translateX(-1rem);
+    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+  }
 
-        color: white;
+  &__image {
+    height: 100%;
+    transform: scale(1.1);
+    transition: all 0.4s ease-out;
+  }
+  &__text {
+    text-align: left;
+    color: white;
+  }
 
-        &--first {
-            position: absolute;
-            top:0;
-            left:0;
+  &__name {
+    color: white;
 
-            opacity: 0;
-            transition: all .4s ease-out;
-        }
-    
-        &--last {
-            position: absolute;
-            right:0;
-            bottom:0;
-            
-            opacity: 0;
-            transition: all .4s ease-out;
-        }
-    }
+    &--first {
+      position: absolute;
+      top: 0;
+      left: 0;
 
-    
-
-    &__frame:hover &__name--first {
-        top: 38%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 1;
-    }
-
-    &__frame:hover &__name--last {
-        top: 62%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 1;
+      opacity: 0;
+      transition: all 0.4s ease-out;
     }
 
-    &__frame:hover &__image {
-        -webkit-filter: blur(2px);
-        transform: scale(1.05) translateY(5px);
-        filter: blur(2px) grayscale(80%) brightness(50%);
+    &--last {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      opacity: 0;
+      transition: all 0.4s ease-out;
     }
+  }
+
+  &__frame:hover &__name--first {
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &__frame:hover &__name--last {
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &__frame:hover &__image {
+    -webkit-filter: blur(2px);
+    transform: scale(1.05) translateY(5px);
+    filter: blur(2px) grayscale(80%) brightness(50%);
+  }
 }

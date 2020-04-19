@@ -1,45 +1,45 @@
 .svg-anim {
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    width: 30%;
-    transform: translate(-50%, -50%);
-    z-index: 800;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 800;
 
-    @media (max-aspect-ratio: 1/1) {
-        top: 75%;
-        left: 47%;
-        width: 60%;
-    }
+  @media (max-aspect-ratio: 1/1) {
+    top: 75%;
+    left: 47%;
+    width: 60%;
+  }
 }
 #woman-hand {
-    animation: right-hand 1s linear infinite alternate;
-    transform-box: fill-box;
-    transform-origin: bottom left;
+  animation: right-hand 1s linear infinite alternate;
+  transform-box: fill-box;
+  transform-origin: bottom left;
 }
 
 #woman-left-hand {
-    animation: left-hand 1s linear infinite alternate;
-    transform-box: fill-box;
-    transform-origin: top right;
+  animation: left-hand 1s linear infinite alternate;
+  transform-box: fill-box;
+  transform-origin: top right;
 }
 #woman-shirt {
-    animation: shirt 1s linear infinite alternate;
-    transform-box: fill-box;
-    transform-origin: top;
+  animation: shirt 1s linear infinite alternate;
+  transform-box: fill-box;
+  transform-origin: top;
 }
 
 #woman-hair {
-    animation: shirt 1s linear infinite alternate;
-    transform-box: fill-box;
-    transform-origin: center;
+  animation: shirt 1s linear infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
 #box-1 {
-    animation: box-1 2s linear infinite;
+  animation: box-1 2s linear infinite;
 }
 
 #box-rem {
-    animation: box-rem 2s linear infinite; 
-    transform-box: fill-box;
+  animation: box-rem 2s linear infinite;
+  transform-box: fill-box;
 }

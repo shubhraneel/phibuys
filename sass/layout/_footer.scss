@@ -22,7 +22,6 @@
       transition: all 0.4s;
     }
 
-
     &::after {
       content: "";
       height: 1rem;
@@ -57,13 +56,11 @@
   }
 
   &__text {
-      margin: 2rem 1rem;
+    margin: 2rem 1rem;
   }
 
   #color-toggle--dark:checked ~ & {
     background-color: darken(#232f3e, 10%);
     color: rgb(200, 200, 200);
   }
-  
 }
-

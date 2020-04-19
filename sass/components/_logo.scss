@@ -1,29 +1,28 @@
 .logo {
-    position:relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 
-    &--pic {
-        width: 4rem;
+  &--pic {
+    width: 4rem;
     background-color: rgba(200, 182, 255, 0.582);
     border-radius: 20%;
     display: inline-block;
-    }
+  }
 
-    &--text {
-        font-family: "Pacifico", cursive;
+  &--text {
+    font-family: "Pacifico", cursive;
     display: inline-block;
     font-size: 3rem;
     line-height: 100%;
     vertical-align: bottom;
     margin: auto;
     color: rgba(202, 98, 162, 0.9);
-    }
+  }
 
-    &--icon {
-        position: absolute;
-        bottom: 0;
-        left: 95%;
-        color: rgba(255, 0, 98, 0.7);
-    }
+  &--icon {
+    position: absolute;
+    bottom: 0;
+    left: 95%;
+    color: rgba(255, 0, 98, 0.7);
+  }
 }
-

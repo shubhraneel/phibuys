@@ -8,7 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "sass": "^1.26.3"
+  },
   "devDependencies": {
     "node-sass": "^4.13.1"
   },
