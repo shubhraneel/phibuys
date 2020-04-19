@@ -1023,7 +1023,7 @@
       color: #e799ff; }
   .section-mostBought .rows--last {
     width: 75%; }
-    @media (max-width: 1199px) {
+    @media (max-width: 1300px) {
       .section-mostBought .rows--last {
         width: 100%; } }
   .section-mostBought .rows:hover .most-card:not(:hover) {

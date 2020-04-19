@@ -114,7 +114,7 @@
   .rows--last {
     width: 75%;
 
-    @include respond(tab-land) {
+    @media (max-width: 1300px) {
       width: 100%;
     }
   }
